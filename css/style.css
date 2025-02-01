@@ -158,6 +158,7 @@ header {
     .control-group {
         width: 100%;
     }
+
     .controls {
         flex-direction: column;
     }

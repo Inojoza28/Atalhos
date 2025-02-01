@@ -58,8 +58,8 @@ const shortcutsData = [
     { title: "Captura Seletiva", description: "Abre a ferramenta de captura de tela seletiva.", keys: "Win + Shift + S", category: "computador" },
     { title: "Emojis", description: "Abre o painel de emojis e símbolos.", keys: "Win + .", category: "computador" },
     { title: "Virtual Desktops", description: "Cria/Cicla entre áreas de trabalho virtuais.", keys: "Win + Ctrl + D / Win + Ctrl + ←/→", category: "computador" },
-    { title: "Fechar Desktop Virtual", description: "Fecha o desktop virtual atual.", keys: "Win + Ctrl + F4", category: "computador"},
-    { title: "Visualizar Desktops Virtuais", description: "Exibe todos os desktops virtuais abertos (Visão geral).", keys: "Win + Tab", category: "computador"},
+    { title: "Fechar Desktop Virtual", description: "Fecha o desktop virtual atual.", keys: "Win + Ctrl + F4", category: "computador" },
+    { title: "Visualizar Desktops Virtuais", description: "Exibe todos os desktops virtuais abertos (Visão geral).", keys: "Win + Tab", category: "computador" },
     { title: "Gravador de Passos", description: "Inicia gravação de passos para troubleshooting.", keys: "Win + R > psr.exe", category: "computador" },
 
     // VS Code - atalhos essenciais e avançados
@@ -188,10 +188,13 @@ function renderShortcuts(data) {
     renderPagination(data.length);
 }
 
-// 5. Função para renderizar paginação inteligente com reticências
+// Função para renderizar paginação inteligente com reticências e ícones no modo mobile
 function renderPagination(totalItems) {
     paginationContainer.innerHTML = "";
     const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    // Verifica se estamos em um dispositivo mobile (tamanho da janela <= 600px)
+    const isMobile = window.innerWidth <= 600;
 
     const createPageButton = (page) => {
         const li = document.createElement("li");
@@ -204,9 +207,13 @@ function renderPagination(totalItems) {
         return li;
     };
 
-    // Botão "Anterior"
+    // Botão "Anterior" ou ícone para mobile
     const prevLi = document.createElement("li");
-    prevLi.textContent = "Anterior";
+    if (isMobile) {
+        prevLi.innerHTML = '<i class="fas fa-chevron-left"></i>';
+    } else {
+        prevLi.textContent = "Anterior";
+    }
     prevLi.className = currentPage === 1 ? "disabled" : "";
     prevLi.addEventListener("click", () => {
         if (currentPage > 1) {
@@ -216,8 +223,8 @@ function renderPagination(totalItems) {
     });
     paginationContainer.appendChild(prevLi);
 
-    // Paginação: exibe um máximo de 5 botões numéricos
-    const maxButtons = 5;
+    // Definindo o número máximo de botões numéricos visíveis
+    const maxButtons = 3;
     let startPage, endPage;
     if (totalPages <= maxButtons) {
         startPage = 1;
@@ -259,9 +266,13 @@ function renderPagination(totalItems) {
         paginationContainer.appendChild(createPageButton(totalPages));
     }
 
-    // Botão "Próximo"
+    // Botão "Próximo" ou ícone para mobile
     const nextLi = document.createElement("li");
-    nextLi.textContent = "Próximo";
+    if (isMobile) {
+        nextLi.innerHTML = '<i class="fas fa-chevron-right"></i>';
+    } else {
+        nextLi.textContent = "Próximo";
+    }
     nextLi.className = currentPage === totalPages ? "disabled" : "";
     nextLi.addEventListener("click", () => {
         if (currentPage < totalPages) {
@@ -271,6 +282,13 @@ function renderPagination(totalItems) {
     });
     paginationContainer.appendChild(nextLi);
 }
+
+// Evento para atualizar a paginação ao redimensionar a janela
+window.addEventListener("resize", () => {
+    // Atualiza apenas a seção de paginação, mantendo os atalhos renderizados
+    renderPagination(filteredData.length);
+});
+
 
 // 6. Função de filtragem e busca
 function filterShortcuts() {
