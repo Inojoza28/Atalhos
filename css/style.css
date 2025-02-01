@@ -153,6 +153,16 @@ header {
     box-shadow: 0 0 0 2px #ff4081;
 }
 
+/* Ajustes para telas pequenas (modo responsivo) */
+@media (max-width: 600px) {
+    .control-group {
+        width: 100%;
+    }
+    .controls {
+        flex-direction: column;
+    }
+}
+
 /* Seção de Atalhos */
 .shortcuts {
     display: grid;
