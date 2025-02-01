@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hub de Atalhos - Modo Dark & 3D</title>
+  <!-- Google Fonts: Poppins e Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Three.js (via CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="icon" href="imgs/logo.png">
+  <!-- CSS customizado -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Canvas para o efeito 3D com Three.js -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container header-container">
+      <!-- Div para a logo -->
+      <div class="header-logo">
+        <img src="imgs/logo.png" alt="Logo Hub de Atalhos">
+      </div>
+      <!-- Div para os textos -->
+      <div class="header-text">
+        <h1 class="logo">Hub de Atalhos</h1>
+        <p class="tagline">Produtividade • Tecnologia • Minimalismo</p>
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h2>Atalhos para o seu dia a dia digital</h2>
+        <p>
+          Descubra os melhores comandos e dicas para maximizar sua produtividade – do Windows ao VS Code, Git, Terminal, Navegador e muito mais.
+        </p>
+      </div>
+      <div class="hero-image">
+        <i class="fas fa-keyboard"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controles: Filtro e Busca -->
+  <section class="controls container">
+    <div class="control-group">
+      <label for="categoryFilter">Filtrar por categoria:</label>
+      <select id="categoryFilter">
+        <option value="all">Todos</option>
+        <option value="computador">Computador</option>
+        <option value="vscode">VS Code</option>
+        <option value="git">Git</option>
+        <option value="terminal">Terminal</option>
+        <option value="navegador">Navegador</option>
+        <option value="outros">Outros</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="searchInput">Buscar atalhos:</label>
+      <input type="text" id="searchInput" placeholder="Ex: commit, copiar, toggle...">
+    </div>
+  </section>
+
+  <!-- Seção de Atalhos -->
+  <section class="shortcuts container" id="shortcutsContainer">
+    <!-- Os atalhos serão injetados via script.js -->
+  </section>
+
+  <!-- Paginação -->
+  <nav class="pagination-container container">
+    <ul id="pagination" class="pagination"></ul>
+  </nav>
+
+  <!-- Seção "Dicas Computacionais" -->
+  <section class="tips container">
+    <h2>Dicas Computacionais</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>Dica 1</h3>
+        <p>
+          Use atalhos para economizar tempo! Por exemplo, <strong>Ctrl + Shift + T</strong> reabre abas fechadas.
+        </p>
+      </div>
+      <div class="tip-card">
+        <h3>Dica 2</h3>
+        <p>
+          Personalize seu VS Code com extensões como <strong>Prettier</strong> e <strong>Bracket Pair Colorizer</strong>.
+        </p>
+      </div>
+      <div class="tip-card">
+        <h3>Dica 3</h3>
+        <p>
+          Organize seu Git utilizando branches para cada nova funcionalidade.
+        </p>
+      </div>
+      <div class="tip-card">
+        <h3>Dica 4</h3>
+        <p>
+          Use atalhos do Windows, como <strong>Win + D</strong> para mostrar a área de trabalho e <strong>Win + L</strong> para bloquear seu PC.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção "Sobre a Aplicação" -->
+  <section class="about container">
+    <h2>Sobre o Hub de Atalhos</h2>
+    <p>
+      Este hub reúne os atalhos mais úteis e dicas para o dia a dia digital, ajudando você a trabalhar de forma mais inteligente e rápida.
+      Encontre comandos essenciais para Windows, VS Code, Git, Terminal, Navegadores e outros, organizados de maneira clara e elegante.
+    </p>
+    <p>
+      Use os filtros e a busca para encontrar rapidamente o comando que você precisa e explore as dicas para aprimorar seu fluxo de trabalho.
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer container">
+    <small>&copy; 2025 Hub de Atalhos - Todos os direitos reservados</small>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
