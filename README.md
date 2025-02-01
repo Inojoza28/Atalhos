@@ -1,8 +1,5 @@
 # Hub de Atalhos
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/hub-de-atalhos)
-
 Hub de Atalhos é uma aplicação front-end moderna e tecnológica, desenvolvida para reunir os atalhos mais úteis para o dia a dia digital. Com um design dark e interativo, o projeto oferece funcionalidades como filtragem, busca e paginação inteligente, além de um fundo animado 3D criado com Three.js para dar um toque futurista.
 
 ## Funcionalidades
