@@ -158,35 +158,46 @@ const paginationContainer = document.getElementById("pagination");
 // 4. Função para renderizar atalhos com animação e paginação
 function renderShortcuts(data) {
     shortcutsContainer.innerHTML = "";
-
+    
+    // Se não houver atalhos para exibir, mostra a mensagem e limpa a paginação
+    if (data.length === 0) {
+      const msg = document.createElement("p");
+      msg.textContent = "Atalho não encontrado.";
+      msg.className = "no-results";
+      shortcutsContainer.appendChild(msg);
+      paginationContainer.innerHTML = "";
+      return;
+    }
+    
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedData = data.slice(startIndex, endIndex);
-
+    
     paginatedData.forEach((shortcut, index) => {
-        const card = document.createElement("div");
-        card.className = "shortcut-card";
-        card.style.animationDelay = `${index * 0.1}s`;
-
-        const titleEl = document.createElement("h3");
-        titleEl.textContent = shortcut.title;
-
-        const descEl = document.createElement("p");
-        descEl.textContent = shortcut.description;
-
-        const keysEl = document.createElement("div");
-        keysEl.className = "keys";
-        keysEl.textContent = shortcut.keys;
-
-        card.appendChild(titleEl);
-        card.appendChild(descEl);
-        card.appendChild(keysEl);
-
-        shortcutsContainer.appendChild(card);
+      const card = document.createElement("div");
+      card.className = "shortcut-card";
+      card.style.animationDelay = `${index * 0.1}s`;
+      
+      const titleEl = document.createElement("h3");
+      titleEl.textContent = shortcut.title;
+      
+      const descEl = document.createElement("p");
+      descEl.textContent = shortcut.description;
+      
+      const keysEl = document.createElement("div");
+      keysEl.className = "keys";
+      keysEl.textContent = shortcut.keys;
+      
+      card.appendChild(titleEl);
+      card.appendChild(descEl);
+      card.appendChild(keysEl);
+      
+      shortcutsContainer.appendChild(card);
     });
-
+    
     renderPagination(data.length);
-}
+  }
+  
 
 // Função para renderizar paginação inteligente com reticências e ícones no modo mobile
 function renderPagination(totalItems) {
