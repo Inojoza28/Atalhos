@@ -285,6 +285,7 @@ header {
 .tip-card {
     background-color: #272727;
     border-radius: 8px;
+    border-left: 1px solid pink;
     padding: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
     opacity: 0;
