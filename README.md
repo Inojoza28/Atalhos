@@ -1,4 +1,4 @@
-# Hub de Atalhos
+![Logo](imgs/logo.png) # Hub de Atalhos
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/hub-de-atalhos)
