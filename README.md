@@ -1,4 +1,4 @@
-![Logo](imgs/logo.png) # Hub de Atalhos
+# Hub de Atalhos
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/hub-de-atalhos)
@@ -32,20 +32,14 @@ Hub de Atalhos é uma aplicação front-end moderna e tecnológica, desenvolvida
 ## Capturas de Tela
 
 ### Visual Geral
-![Visual Geral](https://via.placeholder.com/1200x600.png?text=Visual+Geral)
+![Visual Geral](preview/01.png)
+![Visual Geral](preview/02.png)
+![Visual Geral](preview/03.png)
 
-### Fundo Animado 3D
-![Fundo Animado 3D](https://via.placeholder.com/1200x600.png?text=Fundo+Animado+3D)
-
-### Seção de Atalhos com Paginação
-![Atalhos com Paginação](https://via.placeholder.com/800x400.png?text=Atalhos+Organizados)
-
-### Cards de Dicas Computacionais
-![Cards de Dicas](https://via.placeholder.com/800x400.png?text=Cards+de+Dicas)
 
 ## Como Executar o Projeto
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/yourusername/hub-de-atalhos.git
+   git clone https://github.com/inojoza28/Atalhos.git
    cd hub-de-atalhos
