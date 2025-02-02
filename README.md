@@ -29,11 +29,11 @@ Hub de Atalhos é uma aplicação front-end moderna e tecnológica, desenvolvida
 ## Capturas de Tela
 
 ### Visual Geral
-![Visual Geral](preview/01.png)
+![Visual Geral](preview/0.png)
 --
-![Visual Geral](preview/02.png)
+![Visual Geral](preview/0.png)
 --
-![Visual Geral](preview/03.png)
+![Visual Geral](preview/0.png)
 
 ---
 
