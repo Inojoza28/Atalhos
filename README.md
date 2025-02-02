@@ -41,4 +41,4 @@ Hub de Atalhos é uma aplicação front-end moderna e tecnológica, desenvolvida
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/inojoza28/Atalhos.git
-   cd hub-de-atalhos
+   cd Atalhos
