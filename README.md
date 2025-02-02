@@ -24,7 +24,6 @@ Hub de Atalhos é uma aplicação front-end moderna e tecnológica, desenvolvida
 - **HTML5** e **CSS3** (com Flexbox e CSS Grid)
 - **JavaScript** (Vanilla)
 - **Three.js** para o fundo 3D animado (starfield)
-- **Markdown** para documentação
 
 ## Capturas de Tela
 
